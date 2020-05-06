@@ -1,0 +1,23 @@
+{
+  "name": "brain-games-project",
+  "version": "0.0.1",
+  "description": "",
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-yevs/frontend-project-lvl1.git"
+  },
+  "author": "alex-yevs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex-yevs/frontend-project-lvl1/issues"
+  },
+  "homepage": "https://github.com/alex-yevs/frontend-project-lvl1#readme"
+}
