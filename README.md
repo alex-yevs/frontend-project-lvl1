@@ -17,10 +17,18 @@ $ sudo npm link
 $ make brain-games
 ```
 
+
 ## Brain-Even Game
 
 ```sh
 $ brain-even
 ```
+[![asciicast](https://asciinema.org/a/RvXZ6AKUu2GLl8wW8ydQDPQXD.svg)](https://asciinema.org/a/RvXZ6AKUu2GLl8wW8ydQDPQXD)
 
-[![asciicast](https://asciinema.org/a/tSY5R90mFQDiJ2I1IwMofqD4C.svg)](https://asciinema.org/a/tSY5R90mFQDiJ2I1IwMofqD4C)
+
+## Brain-Calc Game
+
+```sh
+$ brain-calc
+```
+[![asciicast](https://asciinema.org/a/aR2T9VwhUwjbAtzKHAcidJLDU.svg)](https://asciinema.org/a/aR2T9VwhUwjbAtzKHAcidJLDU)

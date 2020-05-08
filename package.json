@@ -4,6 +4,7 @@
   "description": "",
   "bin": {
     "brain-games": "bin/brain-games.js",
+    "brain-calc": "bin/brain-calc.js",
     "brain-even": "bin/brain-even.js"
   },
   "main": "index.js",
