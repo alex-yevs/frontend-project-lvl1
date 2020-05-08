@@ -20,18 +20,11 @@ const brainEven = () => {
     console.log(`Qustion: ${number}`);
     const answer = readlineSync.question('Your answer: ');
     const result = isEven(number) ? 'yes' : 'no';
-    switch (answer) {
-      case 'yes':
-      case 'no':
-        if (answer === result) {
-          console.log('Correct!');
-          n += 1;
-          break;
-        } else {
-          return console.log(`${answer} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, ${userName}!`);
-        }
-      default:
-        return console.log(`This is an incorrect answer ;(. \nLet's try again, ${userName}!`);
+    if (answer === result) {
+      console.log('Correct!');
+      n += 1;
+    } else {
+      return console.log(`${answer} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, ${userName}!`);
     }
   }
   return console.log(`Congratulations, ${userName}!`);
