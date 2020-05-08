@@ -13,8 +13,9 @@ const getRandomOper = () => {
 
 const brainCalc = () => {
   const description = 'What is the result of expression?';
-  const question = () => `${getRandom(10)} ${getRandomOper()} ${getRandom(10)}`;
-  const result = (str) => {
+  const getQuestion = () => `${getRandom(10)} ${getRandomOper()} ${getRandom(10)}`;
+
+  const getResult = (str) => {
     const [a, oper, b] = str.split(' ');
     const x = parseInt(a, 10);
     const y = parseInt(b, 10);
@@ -27,7 +28,7 @@ const brainCalc = () => {
         return `${x * y}`;
     }
   };
-  return engine(description, question, result);
+  return engine(description, getQuestion, getResult);
 };
 
 export {

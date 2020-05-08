@@ -32,3 +32,11 @@ $ brain-even
 $ brain-calc
 ```
 [![asciicast](https://asciinema.org/a/aR2T9VwhUwjbAtzKHAcidJLDU.svg)](https://asciinema.org/a/aR2T9VwhUwjbAtzKHAcidJLDU)
+
+
+## Brain-GCD Game
+
+```sh
+$ brain-gcd
+```
+[![asciicast](https://asciinema.org/a/toTRmFTlNLvjmZe1V7LPSeelY.svg)](https://asciinema.org/a/toTRmFTlNLvjmZe1V7LPSeelY)
