@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import sayWelcome from '../src/cli.js';
+import { askUserName } from '../src/cli.js';
 
-sayWelcome();
+askUserName();

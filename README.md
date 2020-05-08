@@ -9,9 +9,18 @@ This repository is the [Hexlet](https://ru.hexlet.io/professions/frontend/projec
 
 ```sh
 $ make install
+$ sudo npm link
 ```
 ## Run
 
 ```sh
 $ make brain-games
 ```
+
+## Brain-Even Game
+
+```sh
+$ brain-even
+```
+
+[![asciicast](https://asciinema.org/a/tSY5R90mFQDiJ2I1IwMofqD4C.svg)](https://asciinema.org/a/tSY5R90mFQDiJ2I1IwMofqD4C)
