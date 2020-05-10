@@ -1,13 +1,11 @@
 import { engine, getRandomNum } from '../index.js';
 
 const getGCD = (a, b) => {
-  const x = Math.max(a, b);
-  const y = Math.min(a, b);
-  const rest = x % y;
+  const rest = a % b;
   if (rest === 0) {
-    return y;
+    return b;
   }
-  return getGCD(y, rest);
+  return getGCD(b, rest);
 };
 
 
