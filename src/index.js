@@ -1,6 +1,7 @@
 import readlineSync from 'readline-sync';
 
-const getRandom = (max) => Math.floor(Math.random() * Math.floor(max));
+const getRandomNum = (max) => Math.floor(Math.random() * Math.floor(max + 1));
+const getRandomArg = (...rest) => rest[getRandomNum(rest.length - 1)];
 
 
 const askUserName = () => {
@@ -31,5 +32,5 @@ const engine = (description, getQuestion, getResult) => {
 };
 
 export {
-  askUserName, engine, getRandom,
+  askUserName, engine, getRandomNum, getRandomArg,
 };

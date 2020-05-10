@@ -40,3 +40,11 @@ $ brain-calc
 $ brain-gcd
 ```
 [![asciicast](https://asciinema.org/a/toTRmFTlNLvjmZe1V7LPSeelY.svg)](https://asciinema.org/a/toTRmFTlNLvjmZe1V7LPSeelY)
+
+
+## Brain-Progression Game
+
+```sh
+$ brain-progression
+```
+[![asciicast](https://asciinema.org/a/NvoajKNpYW1Ei2Wz9DITQoq8i.svg)](https://asciinema.org/a/NvoajKNpYW1Ei2Wz9DITQoq8i)

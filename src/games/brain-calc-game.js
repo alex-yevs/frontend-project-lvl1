@@ -1,31 +1,20 @@
-import { engine, getRandom } from '../index.js';
-
-const getRandomOper = () => {
-  switch (getRandom(3)) {
-    case 1:
-      return '+';
-    case 2:
-      return '-';
-    default:
-      return '*';
-  }
-};
+import { engine, getRandomNum, getRandomArg } from '../index.js';
 
 const brainCalc = () => {
   const description = 'What is the result of expression?';
-  const getQuestion = () => `${getRandom(10)} ${getRandomOper()} ${getRandom(10)}`;
+  const getQuestion = () => `${getRandomNum(10)} ${getRandomArg('+', '-', '*')} ${getRandomNum(10)}`;
 
   const getResult = (str) => {
     const [a, oper, b] = str.split(' ');
-    const x = parseInt(a, 10);
-    const y = parseInt(b, 10);
+    const x = Number(a);
+    const y = Number(b);
     switch (oper) {
       case '+':
-        return `${x + y}`;
+        return String(x + y);
       case '-':
-        return `${x - y}`;
+        return String(x - y);
       default:
-        return `${x * y}`;
+        return String(x * y);
     }
   };
   return engine(description, getQuestion, getResult);
