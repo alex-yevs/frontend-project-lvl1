@@ -16,6 +16,7 @@ const brainPrime = () => {
   const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
   const getQuestion = () => getRandomNum(200);
   const getResult = (num) => (isPrime(num) ? 'yes' : 'no');
+
   return engine(description, getQuestion, getResult);
 };
 

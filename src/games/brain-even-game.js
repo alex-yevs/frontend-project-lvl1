@@ -6,6 +6,7 @@ const brainEven = () => {
   const description = 'Answer "yes" if the number is even, otherwise answer "no".';
   const getQuestion = () => getRandomNum(100);
   const getResult = (num) => (isEven(num) ? 'yes' : 'no');
+
   return engine(description, getQuestion, getResult);
 };
 

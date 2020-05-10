@@ -5,7 +5,8 @@ const getGameProgression = (first, delta) => {
   for (let i = 1; i <= 9; i += 1) {
     progression[i] = progression[i - 1] + delta;
   }
-  progression[getRandomNum(progression.length - 1)] = '..';
+  const randomIndex = getRandomNum(progression.length - 1);
+  progression[randomIndex] = '..';
   return progression.join(' ');
 };
 
