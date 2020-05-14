@@ -1,36 +1,24 @@
 import { engine, getRandomNum } from '../index.js';
 
-const getGameProgression = (first, delta) => {
-  const progression = [first];
-  for (let i = 1; i <= 9; i += 1) {
+const gameDescription = 'What number is missing in the progression?';
+
+const getGameData = () => {
+  const firstNum = getRandomNum(0, 30);
+  const delta = getRandomNum(0, 30);
+  const progressionLength = 10;
+  const progression = [firstNum];
+  for (let i = 1; i < progressionLength; i += 1) {
     progression[i] = progression[i - 1] + delta;
   }
-  const randomIndex = getRandomNum(progression.length - 1);
+  const randomIndex = getRandomNum(0, progression.length - 1);
+  const markedElement = progression[randomIndex];
   progression[randomIndex] = '..';
-  return progression.join(' ');
+  const question = progression.join(' ');
+  const result = String(markedElement);
+  return [question, result];
 };
 
-const brainProgression = () => {
-  const description = 'What number is missing in the progression?';
-  const getQuestion = () => getGameProgression(getRandomNum(30), getRandomNum(30));
-
-  const getResult = (str) => {
-    const arr = str.split(' ');
-    const lastIndex = arr.length - 1;
-    const markIndex = arr.indexOf('..');
-    if (markIndex === 0) {
-      const delta = Number(arr[2]) - Number(arr[1]);
-      return String(Number(arr[1]) - delta);
-    }
-    if (markIndex === lastIndex) {
-      const delta = Number(arr[lastIndex - 1]) - Number(arr[lastIndex - 2]);
-      return String(Number(arr[lastIndex - 1]) + delta);
-    }
-    return String((Number(arr[markIndex - 1]) + Number(arr[markIndex + 1])) / 2);
-  };
-
-  return engine(description, getQuestion, getResult);
-};
+const brainProgression = () => engine(gameDescription, getGameData);
 
 export {
   brainProgression as default,

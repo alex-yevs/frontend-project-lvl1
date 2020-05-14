@@ -11,12 +11,6 @@ This repository is the [Hexlet](https://ru.hexlet.io/professions/frontend/projec
 $ make install
 $ sudo npm link
 ```
-## Run
-
-```sh
-$ make brain-games
-```
-
 
 ## Brain-Even Game
 

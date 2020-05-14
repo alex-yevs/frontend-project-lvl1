@@ -2,13 +2,15 @@ import { engine, getRandomNum } from '../index.js';
 
 const isEven = (num) => num % 2 === 0;
 
-const brainEven = () => {
-  const description = 'Answer "yes" if the number is even, otherwise answer "no".';
-  const getQuestion = () => getRandomNum(100);
-  const getResult = (num) => (isEven(num) ? 'yes' : 'no');
+const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  return engine(description, getQuestion, getResult);
+const getGameData = () => {
+  const question = getRandomNum(0, 100);
+  const result = isEven(question) ? 'yes' : 'no';
+  return [question, result];
 };
+
+const brainEven = () => engine(gameDescription, getGameData);
 
 export {
   brainEven as default,

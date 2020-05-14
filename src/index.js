@@ -1,26 +1,20 @@
 import readlineSync from 'readline-sync';
 
-const getRandomNum = (max) => Math.floor(Math.random() * Math.floor(max + 1));
-const getRandomArg = (...rest) => rest[getRandomNum(rest.length - 1)];
+const getRandomNum = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+const getRandomArg = (...rest) => rest[getRandomNum(0, rest.length - 1)];
 
 
-const askUserName = () => {
+const engine = (gameDescription, getGameData) => {
   console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  return name;
-};
-
-
-const engine = (description, getQuestion, getResult) => {
-  const userName = askUserName();
-  console.log(description);
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
+  console.log(gameDescription);
   let step = 1;
-  while (step <= 3) {
-    const question = getQuestion();
+  const totalSteps = 3;
+  while (step <= totalSteps) {
+    const [question, result] = getGameData();
     console.log(`Question: ${question}`);
     const answer = readlineSync.question('Your answer: ');
-    const result = getResult(question);
     if (answer === result) {
       console.log('Correct!');
       step += 1;
@@ -32,5 +26,5 @@ const engine = (description, getQuestion, getResult) => {
 };
 
 export {
-  askUserName, engine, getRandomNum, getRandomArg,
+  engine, getRandomNum, getRandomArg,
 };

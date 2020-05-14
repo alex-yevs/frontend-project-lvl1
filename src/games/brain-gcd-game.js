@@ -8,18 +8,17 @@ const getGCD = (a, b) => {
   return getGCD(b, rest);
 };
 
+const gameDescription = 'Find the greatest common divisor of given numbers.';
 
-const brainGCD = () => {
-  const description = 'Find the greatest common divisor of given numbers.';
-  const getQuestion = () => `${getRandomNum(29) + 1} ${getRandomNum(29) + 1}`;
-  const getResult = (str) => {
-    const [a, b] = str.split(' ');
-    const x = Number(a);
-    const y = Number(b);
-    return String(getGCD(x, y));
-  };
-  return engine(description, getQuestion, getResult);
+const getGameData = () => {
+  const firstNum = getRandomNum(1, 30);
+  const secondNum = getRandomNum(1, 30);
+  const question = `${firstNum} ${secondNum}`;
+  const result = String(getGCD(firstNum, secondNum));
+  return [question, result];
 };
+
+const brainGCD = () => engine(gameDescription, getGameData);
 
 export {
   brainGCD as default,
