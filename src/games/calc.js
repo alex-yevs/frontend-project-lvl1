@@ -1,15 +1,16 @@
-import { engine, getRandomNum, getRandomArg } from '../index.js';
+import engine from '../index.js';
+import { getRandomNum, getRandomArg } from '../utils.js';
 
-const calc = (a, operator, b) => {
+const calc = (operator, ...rest) => {
   switch (operator) {
     case '+':
-      return (a + b);
+      return rest.reduce((acc, num) => acc + num, 0);
     case '-':
-      return (a - b);
+      return rest.slice(1).reduce((acc, num) => acc - num, rest[0]);
     case '*':
-      return (a * b);
+      return rest.reduce((acc, num) => acc * num, 1);
     default:
-      throw new Error('invalid parameters of calc specified');
+      throw new Error('Invalid parameters of calc specified');
   }
 };
 
@@ -20,7 +21,7 @@ const getGameData = () => {
   const secondNum = getRandomNum(0, 10);
   const operator = getRandomArg('+', '-', '*');
   const question = `${firstNum} ${operator} ${secondNum}`;
-  const result = String(calc(firstNum, operator, secondNum));
+  const result = String(calc(operator, firstNum, secondNum));
   return [question, result];
 };
 

@@ -1,4 +1,5 @@
-import { engine, getRandomNum } from '../index.js';
+import engine from '../index.js';
+import { getRandomNum } from '../utils.js';
 
 const getGCD = (a, b) => {
   const rest = a % b;
