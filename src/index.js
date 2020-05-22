@@ -15,7 +15,8 @@ const engine = (gameDescription, getGameData) => {
       console.log('Correct!');
       step += 1;
     } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${result}.\nLet's try again, ${userName}!`);
+      console.log(`${answer} is wrong answer ;(. Correct answer was ${result}.`);
+      console.log(`Let's try again, ${userName}!`);
       return;
     }
   }
